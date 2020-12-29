@@ -30,17 +30,17 @@
   <br>
   <br>
 
-  <h3>Two-way Binding True</h3>
+  <!-- <h3>Two-way Binding True</h3>
    <!-- [ngModel] = atualização do novo valor, ou seja, muda seu valor -->
   <!-- (ngModelChange) = ele exibe "dispara toda vez que o ngModel muda" -->
-  <input type="text" [ngModel]="name" (ngModelChange)='name = $event' placeholder="Digite seu nome">
+  <!-- <input type="text" [ngModel]="name" (ngModelChange)='name = $event' placeholder="Digite seu nome">
   <br>
   <br>
-  <label>Seu nome é: {{ name }} </label>
+  <label>Seu nome é: {{ name }} </label> --> -->
 
   <h3> Modo moderno </h3>
   <input type="text" [(ngModel)]="name" placeholder="Digite seu nome">
-  <br>
-  <br>
-  <label class="{{name}}"> Seu nome é: {{ name }} </label>
+    <br>
+    <br>
+    <label [ngClass]="name">Seu nome é: {{ name }}</label>
 </div>
